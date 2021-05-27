@@ -17,7 +17,7 @@
 
 [submodule "components/coap/libcoap"]
 	path = components/coap/libcoap
-	url = ../../obgm/libcoap.git
+	url = ../../smurfix/esp-idf-libcoap.git
 
 [submodule "components/nghttp/nghttp2"]
 	path = components/nghttp/nghttp2
@@ -41,7 +41,7 @@
 
 [submodule "components/asio/asio"]
 	path = components/asio/asio
-	url = ../../espressif/asio.git
+	url = ../../smurfix/esp-idf-asio.git
 
 [submodule "components/expat/expat"]
 	path = components/expat/expat
