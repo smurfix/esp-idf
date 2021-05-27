@@ -183,6 +183,7 @@ coap_print_addr(const struct coap_address_t *addr, unsigned char *buf, size_t le
     port = ntohs(addr->addr.sin.sin_port);
     need_buf = INET_ADDRSTRLEN;
     break;
+#ifdef CONFIG_LWIP_IPV6
   case AF_INET6:
     if (len < 7) /* do not proceed if buffer is even too short for [::]:0 */
       return 0;
@@ -194,6 +195,7 @@ coap_print_addr(const struct coap_address_t *addr, unsigned char *buf, size_t le
     need_buf = INET6_ADDRSTRLEN;
 
     break;
+#endif
   default:
     memcpy(buf, "(unknown address type)", min(22, len));
     return min(22, len);
